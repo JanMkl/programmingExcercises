@@ -1,3 +1,18 @@
+'''
+Your task is to implement push and pop methods for a Stack structure.
+
+The push method will accept a value as parameter and adds a new (class) Node at the top of
+the stack with the given value. The pointers and size should be updated accordingly.
+This method does not return anything.
+
+The pop method will remove the top Node element from the stack and return its value. The
+pointers and size should be updated accordingly. This method does not accept any
+parameters. If the stack is empty, the method should return None.
+
+You'll need to only modify the push() and pop() methods. Everything else should
+remain as is.
+'''
+
 class Node:
     def __init__(self, data=None, next=None):
         self.data = data
@@ -32,10 +47,11 @@ class Stack:
 
     def push(self, data):
         """
-        Add an element to the stack
+        Add a Node element containing data to the stack. This method creates the class Node
+        element and store the data.
 
         Parameters:
-        - 'data': Data/value being added
+        - 'data': Value/data being added
 
         Returns: None
         """
@@ -44,14 +60,30 @@ class Stack:
 
     def pop(self):
         """
-        Remove the top node from the stack and return its content
+        Remove the top Node from the stack and return its content. This method removes the
+        class Node element from the stack and returns the data stored in the Node element.
 
         Parameters: None
 
-        Returns: The content of the node or None if stack is empty
+        Returns: The value/data of the Node or None if stack is empty
         """
         # YOUR CODE GOES HERE
         return
 
+def main():
+    mystack = Stack()
+    for c in 'ABCDEFG':
+        mystack.push(c)
+        print(mystack)
+    for _ in 'ABC':
+        val = mystack.pop()
+        print(val, mystack)
+    for c in 'HIJ':
+        mystack.push(c)
+        print(mystack)
+    for _ in 'DEFGHIJK':
+        val = mystack.pop()
+        print(val, mystack)
 
-
+if __name__ == "__main__":
+    main()
