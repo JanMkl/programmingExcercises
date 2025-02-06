@@ -18,7 +18,7 @@ cell containing the next clue. Starting in the upper left corner (at 1,1), use t
 your search of the array. (The first two clues are 11, 34). The treasure is a cell whose value is
 the same as its coordinates.
 
-Your program must first either use the given example or  read in the treasure map data into a 5 by 5
+Your program must use either the given example or read the treasure map data into a 5 by 5
 array. Your program should output the cells it visits during its search, and a message indicating
 where you found the treasure.
 '''
